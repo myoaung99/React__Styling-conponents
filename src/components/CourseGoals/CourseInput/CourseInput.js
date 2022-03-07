@@ -8,6 +8,11 @@ const CourseInput = props => {
   const [isValid, setValid] = useState(true);
 
   const goalInputChangeHandler = event => {
+
+    // if there are any input set true to isValid
+    if (enteredValue.trim().length > 0) {
+      setValid(true)
+    }
     setEnteredValue(event.target.value);
   };
 
