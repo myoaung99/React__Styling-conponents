@@ -7,6 +7,7 @@ import './CourseInput.css';
 const FormControl = styled.div`
 
   margin: 0.5rem 0;
+ 
 
 
 & label {
@@ -20,10 +21,12 @@ const FormControl = styled.div`
   display: block;
   width: 100%;
   border: 1px solid ${props => props.invalid ? 'red' : '#ccc'};
+  background-color: ${props => props.invalid ? 'rgb(238, 172, 172)' : 'transparent'};
   font: inherit;
   line-height: 1.5rem;
   padding: 0 0.25rem;
 }
+
 
 & input:focus {
   outline: none;
@@ -31,12 +34,6 @@ const FormControl = styled.div`
   border-color: #8b005d;
 }
 
-
-
-&.invalid input{
-  border-color: red;
-  background-color: rgb(238, 172, 172);
-}
 `;
 
 const CourseInput = props => {
